@@ -25,7 +25,7 @@ COPY ./scripts/start.sh /start.sh
 
 # Fix all permissions
 RUN chmod +x /start.sh
-RUN chmod 755 -R /data
+RUN chmod 666 -R /data
 
 # 25565 is for minecraft
 EXPOSE 25565
