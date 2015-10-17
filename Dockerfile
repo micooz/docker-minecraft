@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Download and install everything from the repos.
 RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get --yes upgrade
 RUN apt-get --yes install software-properties-common vim
 RUN sudo apt-add-repository --yes ppa:webupd8team/java; apt-get --yes update
 RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections  && \
