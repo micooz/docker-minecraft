@@ -12,6 +12,6 @@ fi
 
 echo "configuring ${propertyfile} ..."
 
-sed -i -e"s/online-mode=.*/online-mode=false" $propertyfile
+sed -i -e"s/online-mode=.*/online-mode=false/" $propertyfile
 
 java -Xmx${maxmemory} -jar $jarfile nogui
