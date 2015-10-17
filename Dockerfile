@@ -18,7 +18,7 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
 ADD ./bin/minecraft_server.1.8.8.jar /data/minecraft_server.jar
 
 # ADD setting files
-ADD ./settings /data
+COPY ./settings /data
 
 # ADD an entry command
 ADD ./scripts/start.sh /start.sh
