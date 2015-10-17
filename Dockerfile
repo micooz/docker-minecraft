@@ -15,7 +15,7 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
     apt-get --yes install curl oracle-java8-installer
 
 # Add setting files
-COPY ./settings /data
+COPY settings /data/
 
 # Add pre-downloaded binary jar
 COPY ./bin/minecraft_server.1.8.8.jar /data/minecraft_server.jar
