@@ -17,4 +17,8 @@ sed -i -e"s/online-mode=.*/online-mode=false/" $propertyfile
 sed -i -e"s/eula=.*/eula=true/" $eulafile
 
 # it's necessary for java running at correct ENV
-cd /data && java -Xmx${maxmemory} -jar minecraft_server.jar nogui
+cd /data
+
+java -Xmx${maxmemory} -jar minecraft_server.jar <<EOT
+op Micooz
+EOT
