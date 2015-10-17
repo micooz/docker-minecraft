@@ -15,6 +15,4 @@ echo "configuring ${propertyfile} ..."
 sed -i -e"s/online-mode=.*/online-mode=false/" $propertyfile
 
 # it's necessary for java running at correct ENV
-cd /data
-
-java -Xmx${maxmemory} -jar $jarfile nogui
+cd /data && java -Xmx${maxmemory} -jar minecraft_server.jar nogui
